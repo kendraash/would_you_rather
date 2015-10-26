@@ -2,7 +2,11 @@
 
 <% @choices.order(created_at: :desc).each do |choice| %>
   <h4>Would you rather?</h4>
-  <p><%= link_to "#{choice.option_a}, (#{choice.vote_a} votes)", choice_path(choice, :vote_a => "a"), method: "patch" %> OR <%= link_to "#{choice.option_b}, (#{choice.vote_b} votes)", choice_path(choice, :vote_b => "b"), method: "patch" %></p>
+  <p><%= link_to "#{choice.option_a}, (Votes: #{choice.vote_a})", choice_path(choice, :vote_a => "a"), method: "patch" %>
+    OR
+    <%= link_to "#{choice.option_b}, (Votes: #{choice.vote_b})", choice_path(choice, :vote_b => "b"), method: "patch" %>
+  </p>
+
   <% if choice.comments.any? %>
     <ul>
       <% choice.comments.each do |comment| %>

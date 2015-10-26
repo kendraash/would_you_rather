@@ -10,6 +10,7 @@ gem 'turbolinks'
 gem 'bcrypt'
 gem 'bootstrap-sass'
 gem "letter_opener"
+gem 'chartkick'
 
 group :development do
   gem 'byebug'
