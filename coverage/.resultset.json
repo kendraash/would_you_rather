@@ -36,8 +36,8 @@
         null,
         null,
         1,
-        7,
-        7,
+        8,
+        8,
         null,
         null,
         1,
@@ -246,6 +246,16 @@
         1,
         1,
         null,
+        null,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        null,
+        null,
         null
       ],
       "/Users/Guest/Desktop/would_you_rather/spec/models/choice_spec.rb": [
@@ -280,7 +290,7 @@
       "/Users/Guest/Desktop/would_you_rather/app/controllers/home_controller.rb": [
         1,
         1,
-        4,
+        5,
         null,
         null,
         null
@@ -320,20 +330,20 @@
         1,
         null,
         1,
-        1,
-        1,
+        2,
+        2,
         null,
         null,
         1,
-        1,
-        1,
-        1,
+        2,
+        2,
+        2,
         1,
         2,
         1,
         null,
         null,
-        0,
+        1,
         null,
         null,
         null,
@@ -341,11 +351,11 @@
         1,
         null,
         1,
-        1,
+        2,
         null,
         null
       ]
     },
-    "timestamp": 1445894121
+    "timestamp": 1445894515
   }
 }
