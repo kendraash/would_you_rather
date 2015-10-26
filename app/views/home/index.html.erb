@@ -3,9 +3,19 @@
 <% @choices.each do |choice| %>
   <h4>Would you rather?</h4>
   <p><%= choice.option_a %> OR <%= choice.option_b %></p>
+  <% if choice.comments.any? %>
+    <ul>
+      <% choice.comments.each do |comment| %>
+        <li><%= comment.content %></li>
+      <% end %>
+    </ul>
+  <% else %>
+    <p>No comments yet!</p>
+  <% end %>
+
   <%= link_to "Add Comment", new_choice_comment_path(choice), id: "new_comment_link_#{choice.id}", class: 'new_comment_link', remote: true %>
 <%end %>
 
 
-
-  <%= link_to "Add Choice", new_choice_path, id: 'new_choice_link', remote: true, class: "btn" %>
+<hr>
+<%= link_to "Add Choice", new_choice_path, id: 'new_choice_link', remote: true, class: "btn" %>
