@@ -1,8 +1,8 @@
 <h1>Would You Rather</h1>
 
-<% @choices.each do |choice| %>
+<% @choices.order(created_at: :desc).each do |choice| %>
   <h4>Would you rather?</h4>
-  <p><%= choice.option_a %> OR <%= choice.option_b %></p>
+  <p><%= link_to "#{choice.option_a}, (#{choice.vote_a} votes)", choice_path(choice, :vote_a => "a"), method: "patch" %> OR <%= link_to "#{choice.option_b}, (#{choice.vote_b} votes)", choice_path(choice, :vote_b => "b"), method: "patch" %></p>
   <% if choice.comments.any? %>
     <ul>
       <% choice.comments.each do |comment| %>

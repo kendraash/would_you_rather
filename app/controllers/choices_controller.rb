@@ -14,6 +14,23 @@ class ChoicesController < ApplicationController
     end
   end
 
+  def update
+    @choice = Choice.find(params[:id])
+    if params[:vote_a] == 'a'
+      @choice.update(vote_a: (@choice.vote_a + 1))
+      respond_to do |format|
+        format.html { redirect_to root_path }
+        format.js
+      end
+    elsif params[:vote_b] == 'b'
+      @choice.update(vote_b: (@choice.vote_b + 1))
+      respond_to do |format|
+        format.html { redirect_to root_path }
+        format.js
+      end
+    end
+  end
+
   private
 
   def choice_params
