@@ -1,0 +1,9 @@
+<%= render "layouts/errors", :object => @choice %>
+
+<%= form_for @choice do |f| %>
+  <%= f.label :option_a %>
+  <%= f.text_field :option_a %>
+  <%= f.label :option_b %>
+  <%= f.text_field :option_b %>
+  <%= f.submit %>
+<% end %>

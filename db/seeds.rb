@@ -5,3 +5,5 @@
 #
 #   cities = City.create([{ name: 'Chicago' }, { name: 'Copenhagen' }])
 #   Mayor.create(name: 'Emanuel', city: cities.first)
+
+choices = Choice.create([{ option_a: 'Eat chocolate ice cream', option_b: 'Eat vanilla ice cream'}, { option_a: 'Eat a biscuit with gravy', option_b: 'Eat a biscuit with jam'}, { option_a: 'Have a personal chef for life', option_b: 'Free food for life'}])
