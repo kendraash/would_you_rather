@@ -7,9 +7,10 @@ class ChoicesController < ApplicationController
   def create
     @choice = Choice.new(choice_params)
     if @choice.save
-      redirect_to root_path
-    else
-      render :new
+      respond_to do |format|
+        format.html { redirect_to root_path }
+        format.js
+      end
     end
   end
 
