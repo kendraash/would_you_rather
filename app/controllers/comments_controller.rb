@@ -8,6 +8,7 @@ class CommentsController < ApplicationController
   def create
     @choice = Choice.find(params[:choice_id])
     @comment = @choice.comments.new(comment_params)
+    @comment.user = current_user
     if @comment.save
       respond_to do |format|
         format.html { redirect_to root_path }
