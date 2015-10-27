@@ -7,7 +7,9 @@
       OR
       <%= link_to "#{choice.option_b}, (Votes: #{choice.vote_b})", choice_path(choice, :vote_b => "b"), class: 'btn-lg btn-info', method: "patch" %>
     </p>
-
+    <div id="chart-1" style="height: 100px; width: 200px;">
+      <%= bar_chart [{name: choice.option_a, data: Choice.where(id: choice.id).group(:option_a).sum(:vote_a)}, {name: choice.option_a, data: Choice.where(id: choice.id).group(:option_b).sum(:vote_b)}] %>
+    </div>
     <% if choice.comments.any? %>
       <ul>
         <% choice.comments.each do |comment| %>
